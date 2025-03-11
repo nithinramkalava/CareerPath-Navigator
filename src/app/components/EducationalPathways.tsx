@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import CareerAssessment from './CareerAssessment';
 
 type Skill = {
   id: string;
@@ -48,6 +49,20 @@ const allSkills: Skill[] = [
   { id: 'devops', name: 'DevOps', description: 'Streamlining development and operations processes', level: 8, type: 'technical' },
   { id: 'blockchain', name: 'Blockchain', description: 'Developing decentralized applications and systems', level: 9, type: 'technical' },
   
+  // New technical skills
+  { id: 'ai', name: 'Artificial Intelligence', description: 'Creating intelligent machines that work and react like humans', level: 9, type: 'technical' },
+  { id: 'ar-vr', name: 'AR/VR Development', description: 'Creating immersive digital experiences', level: 8, type: 'technical' },
+  { id: 'data-visualization', name: 'Data Visualization', description: 'Presenting data in visual formats for better understanding', level: 7, type: 'technical' },
+  { id: 'iot', name: 'Internet of Things', description: 'Building connected devices and systems', level: 8, type: 'technical' },
+  { id: 'game-design', name: 'Game Design', description: 'Creating rules and content for interactive entertainment', level: 7, type: 'technical' },
+  { id: 'quantum-computing', name: 'Quantum Computing', description: 'Working with quantum-mechanical phenomena for computation', level: 10, type: 'technical' },
+  { id: 'robotics', name: 'Robotics', description: 'Designing and building automated machines', level: 9, type: 'technical' },
+  { id: 'bioinformatics', name: 'Bioinformatics', description: 'Using computational methods to analyze biological data', level: 9, type: 'technical' },
+  { id: 'network-engineering', name: 'Network Engineering', description: 'Designing and implementing computer networks', level: 7, type: 'technical' },
+  { id: '3d-modeling', name: '3D Modeling', description: 'Creating three-dimensional representations of objects', level: 6, type: 'technical' },
+  { id: 'digital-marketing', name: 'Digital Marketing', description: 'Promoting products through online channels', level: 5, type: 'technical' },
+  { id: 'seo', name: 'SEO', description: 'Optimizing content for search engines', level: 6, type: 'technical' },
+  
   // Soft skills
   { id: 'critical-thinking', name: 'Critical Thinking', description: 'Analyzing facts to form a judgment', level: 7, type: 'soft' },
   { id: 'communication', name: 'Communication', description: 'Exchanging information effectively', level: 8, type: 'soft' },
@@ -65,6 +80,19 @@ const allSkills: Skill[] = [
   { id: 'conflict-resolution', name: 'Conflict Resolution', description: 'Addressing and resolving disagreements', level: 8, type: 'soft' },
   { id: 'cultural-awareness', name: 'Cultural Awareness', description: 'Understanding diverse perspectives and cultures', level: 6, type: 'soft' },
   { id: 'networking', name: 'Networking', description: 'Building and maintaining professional relationships', level: 7, type: 'soft' },
+  
+  // New soft skills
+  { id: 'empathy', name: 'Empathy', description: 'Understanding and sharing feelings of others', level: 8, type: 'soft' },
+  { id: 'strategic-thinking', name: 'Strategic Thinking', description: 'Planning to achieve long-term goals', level: 9, type: 'soft' },
+  { id: 'mentoring', name: 'Mentoring', description: 'Guiding others in personal and professional development', level: 7, type: 'soft' },
+  { id: 'persuasion', name: 'Persuasion', description: 'Influencing others through reasoning and emotion', level: 8, type: 'soft' },
+  { id: 'decision-making', name: 'Decision Making', description: 'Making choices between alternatives effectively', level: 8, type: 'soft' },
+  { id: 'active-listening', name: 'Active Listening', description: 'Fully concentrating, understanding, and responding to speakers', level: 7, type: 'soft' },
+  { id: 'resilience', name: 'Resilience', description: 'Recovering quickly from difficulties', level: 8, type: 'soft' },
+  { id: 'project-planning', name: 'Project Planning', description: 'Organizing tasks and resources to achieve objectives', level: 7, type: 'soft' },
+  { id: 'customer-service', name: 'Customer Service', description: 'Assisting and advising customers effectively', level: 6, type: 'soft' },
+  { id: 'work-ethic', name: 'Work Ethic', description: 'Demonstrating commitment and diligence in tasks', level: 8, type: 'soft' },
+  { id: 'ethical-reasoning', name: 'Ethical Reasoning', description: 'Applying moral principles to decision-making', level: 9, type: 'soft' },
 ];
 
 const careerPaths: CareerPath[] = [
@@ -73,7 +101,7 @@ const careerPaths: CareerPath[] = [
     title: 'Software Engineer',
     description: 'Design and develop software systems',
     requiredSkills: ['programming', 'problem-solving', 'teamwork', 'critical-thinking'],
-    salaryRange: '$70,000 - $150,000',
+    salaryRange: '₹5L - ₹30L',
     growthProspect: 'High',
     educationLevel: 'undergraduate'
   },
@@ -82,7 +110,7 @@ const careerPaths: CareerPath[] = [
     title: 'Data Scientist',
     description: 'Analyze and interpret complex data',
     requiredSkills: ['data-analysis', 'programming', 'math', 'critical-thinking', 'machine-learning'],
-    salaryRange: '$90,000 - $160,000',
+    salaryRange: '₹8L - ₹35L',
     growthProspect: 'Very High',
     educationLevel: 'graduate'
   },
@@ -91,7 +119,7 @@ const careerPaths: CareerPath[] = [
     title: 'Academic Researcher',
     description: 'Conduct original research in specialized fields',
     requiredSkills: ['research', 'writing', 'critical-thinking', 'time-management'],
-    salaryRange: '$60,000 - $120,000',
+    salaryRange: '₹4L - ₹15L',
     growthProspect: 'Moderate',
     educationLevel: 'doctoral'
   },
@@ -100,7 +128,7 @@ const careerPaths: CareerPath[] = [
     title: 'Product Manager',
     description: 'Oversee product development from conception to launch',
     requiredSkills: ['leadership', 'communication', 'problem-solving', 'negotiation', 'time-management'],
-    salaryRange: '$80,000 - $170,000', 
+    salaryRange: '₹12L - ₹40L', 
     growthProspect: 'High',
     educationLevel: 'professional'
   },
@@ -109,7 +137,7 @@ const careerPaths: CareerPath[] = [
     title: 'UX Designer',
     description: 'Create intuitive and engaging user experiences',
     requiredSkills: ['design', 'communication', 'problem-solving', 'ui-ux', 'creativity'],
-    salaryRange: '$65,000 - $130,000',
+    salaryRange: '₹6L - ₹25L',
     growthProspect: 'High',
     educationLevel: 'undergraduate'
   },
@@ -118,7 +146,7 @@ const careerPaths: CareerPath[] = [
     title: 'Technical Writer',
     description: 'Create documentation for complex technical products',
     requiredSkills: ['writing', 'communication', 'research', 'time-management'],
-    salaryRange: '$60,000 - $110,000',
+    salaryRange: '₹4L - ₹18L',
     growthProspect: 'Moderate',
     educationLevel: 'undergraduate'
   },
@@ -129,7 +157,7 @@ const careerPaths: CareerPath[] = [
     title: 'Cybersecurity Analyst',
     description: 'Protect information systems from threats and vulnerabilities',
     requiredSkills: ['cybersecurity', 'problem-solving', 'critical-thinking', 'adaptability'],
-    salaryRange: '$75,000 - $140,000',
+    salaryRange: '₹7L - ₹30L',
     growthProspect: 'Very High',
     educationLevel: 'undergraduate'
   },
@@ -138,7 +166,7 @@ const careerPaths: CareerPath[] = [
     title: 'Cloud Architect',
     description: 'Design and implement cloud-based solutions',
     requiredSkills: ['cloud-computing', 'programming', 'database', 'problem-solving'],
-    salaryRange: '$90,000 - $180,000',
+    salaryRange: '₹15L - ₹45L',
     growthProspect: 'High',
     educationLevel: 'graduate'
   },
@@ -147,7 +175,7 @@ const careerPaths: CareerPath[] = [
     title: 'Machine Learning Engineer',
     description: 'Build and deploy machine learning models',
     requiredSkills: ['machine-learning', 'programming', 'math', 'problem-solving', 'critical-thinking'],
-    salaryRange: '$100,000 - $175,000',
+    salaryRange: '₹10L - ₹40L',
     growthProspect: 'Very High',
     educationLevel: 'graduate'
   },
@@ -156,7 +184,7 @@ const careerPaths: CareerPath[] = [
     title: 'DevOps Engineer',
     description: 'Implement and maintain CI/CD pipelines and infrastructure',
     requiredSkills: ['devops', 'programming', 'cloud-computing', 'problem-solving'],
-    salaryRange: '$85,000 - $160,000',
+    salaryRange: '₹8L - ₹35L',
     growthProspect: 'High',
     educationLevel: 'undergraduate'
   },
@@ -165,7 +193,7 @@ const careerPaths: CareerPath[] = [
     title: 'Mobile Developer',
     description: 'Create applications for mobile platforms',
     requiredSkills: ['mobile-dev', 'programming', 'ui-ux', 'problem-solving'],
-    salaryRange: '$70,000 - $140,000',
+    salaryRange: '₹6L - ₹28L',
     growthProspect: 'High',
     educationLevel: 'undergraduate'
   },
@@ -173,8 +201,8 @@ const careerPaths: CareerPath[] = [
     id: 'project-manager',
     title: 'Project Manager',
     description: 'Plan and execute projects to meet requirements',
-    requiredSkills: ['leadership', 'communication', 'time-management', 'conflict-resolution'],
-    salaryRange: '$75,000 - $150,000',
+    requiredSkills: ['leadership', 'communication', 'time-management', 'conflict-resolution', 'project-planning'],
+    salaryRange: '₹10L - ₹35L',
     growthProspect: 'Moderate',
     educationLevel: 'professional'
   },
@@ -183,7 +211,7 @@ const careerPaths: CareerPath[] = [
     title: 'Blockchain Developer',
     description: 'Develop blockchain applications and smart contracts',
     requiredSkills: ['blockchain', 'programming', 'critical-thinking', 'problem-solving'],
-    salaryRange: '$100,000 - $180,000',
+    salaryRange: '₹12L - ₹40L',
     growthProspect: 'High',
     educationLevel: 'graduate'
   },
@@ -192,9 +220,137 @@ const careerPaths: CareerPath[] = [
     title: 'Data Engineer',
     description: 'Build systems to collect, store, and analyze data',
     requiredSkills: ['database', 'programming', 'data-analysis', 'problem-solving'],
-    salaryRange: '$85,000 - $160,000',
+    salaryRange: '₹7L - ₹30L',
     growthProspect: 'High',
     educationLevel: 'undergraduate'
+  },
+  
+  // New diverse career paths
+  {
+    id: 'ai-ethicist',
+    title: 'AI Ethicist',
+    description: 'Ensure AI systems are developed and deployed ethically',
+    requiredSkills: ['ai', 'critical-thinking', 'ethical-reasoning', 'research', 'communication'],
+    salaryRange: '₹9L - ₹28L',
+    growthProspect: 'High',
+    educationLevel: 'graduate'
+  },
+  {
+    id: 'bioinformatician',
+    title: 'Bioinformatician',
+    description: 'Analyze biological data using computational methods',
+    requiredSkills: ['bioinformatics', 'programming', 'data-analysis', 'research', 'critical-thinking'],
+    salaryRange: '₹7L - ₹25L',
+    growthProspect: 'High',
+    educationLevel: 'graduate'
+  },
+  {
+    id: 'digital-content-creator',
+    title: 'Digital Content Creator',
+    description: 'Create engaging digital content for various platforms',
+    requiredSkills: ['creativity', 'communication', 'design', 'digital-marketing', 'adaptability'],
+    salaryRange: '₹4L - ₹20L',
+    growthProspect: 'High',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'quantum-computing-researcher',
+    title: 'Quantum Computing Researcher',
+    description: 'Advance the field of quantum computing through research',
+    requiredSkills: ['quantum-computing', 'math', 'research', 'programming', 'critical-thinking'],
+    salaryRange: '₹15L - ₹45L',
+    growthProspect: 'Very High',
+    educationLevel: 'doctoral'
+  },
+  {
+    id: 'game-developer',
+    title: 'Game Developer',
+    description: 'Design and develop video games',
+    requiredSkills: ['programming', 'game-design', '3d-modeling', 'creativity', 'teamwork'],
+    salaryRange: '₹5L - ₹25L',
+    growthProspect: 'Moderate',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'network-engineer',
+    title: 'Network Engineer',
+    description: 'Design, implement and maintain computer networks',
+    requiredSkills: ['network-engineering', 'problem-solving', 'critical-thinking', 'adaptability'],
+    salaryRange: '₹6L - ₹25L',
+    growthProspect: 'Moderate',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'ar-vr-developer',
+    title: 'AR/VR Developer',
+    description: 'Create immersive augmented and virtual reality experiences',
+    requiredSkills: ['ar-vr', 'programming', '3d-modeling', 'design', 'creativity'],
+    salaryRange: '₹7L - ₹30L',
+    growthProspect: 'High',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'robotics-engineer',
+    title: 'Robotics Engineer',
+    description: 'Design, build and maintain robotic systems',
+    requiredSkills: ['robotics', 'programming', 'math', 'problem-solving', 'critical-thinking'],
+    salaryRange: '₹8L - ₹35L',
+    growthProspect: 'High',
+    educationLevel: 'graduate'
+  },
+  {
+    id: 'digital-marketing-specialist',
+    title: 'Digital Marketing Specialist',
+    description: 'Plan and execute digital marketing campaigns',
+    requiredSkills: ['digital-marketing', 'seo', 'communication', 'creativity', 'data-analysis'],
+    salaryRange: '₹4L - ₹20L',
+    growthProspect: 'High',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'data-visualization-specialist',
+    title: 'Data Visualization Specialist',
+    description: 'Create visual representations of data for easy understanding',
+    requiredSkills: ['data-visualization', 'design', 'data-analysis', 'communication', 'creativity'],
+    salaryRange: '₹6L - ₹25L',
+    growthProspect: 'High',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'iot-developer',
+    title: 'IoT Developer',
+    description: 'Design and develop connected devices and systems',
+    requiredSkills: ['iot', 'programming', 'network-engineering', 'problem-solving', 'critical-thinking'],
+    salaryRange: '₹7L - ₹30L',
+    growthProspect: 'Very High',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'ai-researcher',
+    title: 'AI Researcher',
+    description: 'Conduct cutting-edge research in artificial intelligence',
+    requiredSkills: ['ai', 'machine-learning', 'math', 'research', 'critical-thinking'],
+    salaryRange: '₹10L - ₹40L',
+    growthProspect: 'Very High',
+    educationLevel: 'doctoral'
+  },
+  {
+    id: 'customer-success-manager',
+    title: 'Customer Success Manager',
+    description: 'Ensure customers achieve desired outcomes while using a product or service',
+    requiredSkills: ['customer-service', 'communication', 'empathy', 'problem-solving', 'adaptability'],
+    salaryRange: '₹5L - ₹25L',
+    growthProspect: 'High',
+    educationLevel: 'undergraduate'
+  },
+  {
+    id: 'scrum-master',
+    title: 'Scrum Master',
+    description: 'Facilitate Agile development teams and processes',
+    requiredSkills: ['leadership', 'communication', 'problem-solving', 'adaptability', 'conflict-resolution'],
+    salaryRange: '₹8L - ₹30L',
+    growthProspect: 'Moderate',
+    educationLevel: 'professional'
   },
 ];
 
@@ -204,7 +360,7 @@ const educationLevels: EducationLevel[] = [
     name: 'High School',
     years: '4 years',
     skills: allSkills.filter(skill => 
-      ['critical-thinking', 'teamwork', 'adaptability'].includes(skill.id)
+      ['critical-thinking', 'teamwork', 'adaptability', 'communication', 'creativity', 'active-listening', 'resilience', 'work-ethic'].includes(skill.id)
     ).map(skill => ({ ...skill, level: Math.min(skill.level, 4) })),
     careers: []
   },
@@ -213,7 +369,9 @@ const educationLevels: EducationLevel[] = [
     name: 'Undergraduate',
     years: '4 years',
     skills: allSkills.filter(skill => 
-      ['programming', 'writing', 'design', 'communication', 'problem-solving', 'critical-thinking', 'teamwork'].includes(skill.id)
+      ['programming', 'writing', 'design', 'communication', 'problem-solving', 'critical-thinking', 'teamwork', 
+      'mobile-dev', 'ui-ux', 'database', 'digital-marketing', 'seo', '3d-modeling', 'network-engineering', 'iot',
+      'game-design', 'customer-service', 'time-management', 'adaptability', 'data-visualization', 'ar-vr'].includes(skill.id)
     ).map(skill => ({ ...skill, level: Math.min(skill.level, 7) })),
     careers: careerPaths.filter(career => career.educationLevel === 'undergraduate')
   },
@@ -222,7 +380,9 @@ const educationLevels: EducationLevel[] = [
     name: 'Graduate',
     years: '1-2 years',
     skills: allSkills.filter(skill => 
-      ['data-analysis', 'research', 'leadership', 'communication', 'problem-solving', 'critical-thinking'].includes(skill.id)
+      ['data-analysis', 'research', 'leadership', 'communication', 'problem-solving', 'critical-thinking',
+      'machine-learning', 'cloud-computing', 'ai', 'devops', 'blockchain', 'bioinformatics', 'strategic-thinking',
+      'project-planning', 'mentoring', 'decision-making', 'persuasion', 'robotics', 'ethical-reasoning'].includes(skill.id)
     ).map(skill => ({ ...skill, level: Math.min(skill.level, 9) })),
     careers: careerPaths.filter(career => career.educationLevel === 'graduate')
   },
@@ -231,7 +391,8 @@ const educationLevels: EducationLevel[] = [
     name: 'Doctoral',
     years: '4-7 years',
     skills: allSkills.filter(skill => 
-      ['research', 'writing', 'critical-thinking', 'math'].includes(skill.id)
+      ['research', 'writing', 'critical-thinking', 'math', 'quantum-computing', 'ai', 
+      'bioinformatics', 'machine-learning', 'strategic-thinking'].includes(skill.id)
     ).map(skill => ({ ...skill, level: skill.level })),
     careers: careerPaths.filter(career => career.educationLevel === 'doctoral')
   },
@@ -240,7 +401,9 @@ const educationLevels: EducationLevel[] = [
     name: 'Professional',
     years: 'Varies',
     skills: allSkills.filter(skill => 
-      ['leadership', 'communication', 'adaptability', 'teamwork'].includes(skill.id)
+      ['leadership', 'communication', 'adaptability', 'teamwork', 'negotiation', 'time-management',
+      'conflict-resolution', 'networking', 'strategic-thinking', 'project-planning', 'decision-making',
+      'customer-service', 'empathy', 'persuasion'].includes(skill.id)
     ).map(skill => ({ ...skill, level: Math.min(skill.level, 8) })),
     careers: careerPaths.filter(career => career.educationLevel === 'professional')
   }
@@ -277,6 +440,7 @@ export default function EducationalPathways() {
   const [preferHighGrowth, setPreferHighGrowth] = useState<boolean>(false);
   const [careersToCompare, setCareersToCompare] = useState<string[]>([]);
   const [showComparison, setShowComparison] = useState<boolean>(false);
+  const [showAssessment, setShowAssessment] = useState<boolean>(false);
   
   useEffect(() => {
     // Enhanced matching algorithm with weighted skills and growth prospects
@@ -444,8 +608,15 @@ export default function EducationalPathways() {
     setShowComparison(false);
   };
 
+  // Add a function to close the assessment
+  const closeAssessment = () => {
+    setShowAssessment(false);
+  };
+
   return (
     <section className="py-12 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
+      {showAssessment && <CareerAssessment onClose={closeAssessment} />}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">
@@ -454,6 +625,27 @@ export default function EducationalPathways() {
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
             Discover how different education choices unlock skills and career opportunities
           </p>
+          
+          {/* New prominent CTA for Career Assessment */}
+          <div className="mt-8 bg-gradient-to-r from-indigo-100 to-purple-100 p-6 rounded-2xl shadow-sm max-w-3xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="text-left mb-4 md:mb-0">
+                <h3 className="text-2xl font-bold text-indigo-800">Confused about your career path?</h3>
+                <p className="text-indigo-600 mt-2">Take our personalized assessment to discover careers that match your skills, interests, and values.</p>
+              </div>
+              <motion.button 
+                className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-md font-medium flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowAssessment(true)}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                </svg>
+                Start Assessment
+              </motion.button>
+            </div>
+          </div>
         </div>
 
         {/* Education Level Selection */}
@@ -963,11 +1155,18 @@ export default function EducationalPathways() {
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-500 mb-3">Want to explore more detailed pathways?</p>
           <motion.button 
-            className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-md font-medium"
+            className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg font-medium text-lg relative overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setShowAssessment(true)}
           >
-            Start Personalized Career Assessment
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+            <div className="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              Start Personalized Career Assessment
+            </div>
           </motion.button>
         </div>
       </div>
