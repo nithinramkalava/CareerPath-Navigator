@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 type AssessmentStep = 'intro' | 'interests' | 'skills' | 'values' | 'preferences' | 'results';
@@ -27,12 +27,6 @@ type ValueItem = {
   name: string;
   description: string;
   icon: string;
-};
-
-// Define preference options
-type PreferenceOption = {
-  id: string;
-  label: string;
 };
 
 // User responses for each step
@@ -74,7 +68,6 @@ export default function CareerAssessment({ onClose }: { onClose: () => void }) {
     },
   });
   const [recommendedCareers, setRecommendedCareers] = useState<CareerPath[]>([]);
-  const [isGeneratingResults, setIsGeneratingResults] = useState(false);
   
   // Interest categories
   const interestCategories: InterestCategory[] = [
@@ -289,6 +282,8 @@ export default function CareerAssessment({ onClose }: { onClose: () => void }) {
   };
   
   // Sample career paths database - in a real app this would come from an API or backend
+  // Commented out as it's not currently being used
+  /*
   const careerPaths: CareerPath[] = [
     {
       id: 'data-scientist',
@@ -299,70 +294,7 @@ export default function CareerAssessment({ onClose }: { onClose: () => void }) {
       growthProspect: 'High',
       educationLevel: 'graduate'
     },
-    {
-      id: 'software-developer',
-      title: 'Software Developer',
-      description: 'Design and build applications and systems',
-      requiredSkills: ['programming', 'problem-solving', 'teamwork', 'creativity'],
-      salaryRange: '₹5L - ₹35L',
-      growthProspect: 'Very High',
-      educationLevel: 'undergraduate'
-    },
-    {
-      id: 'ux-designer',
-      title: 'UX Designer',
-      description: 'Create meaningful and relevant experiences for users',
-      requiredSkills: ['design', 'creativity', 'communication', 'empathy', 'research'],
-      salaryRange: '₹6L - ₹25L',
-      growthProspect: 'High',
-      educationLevel: 'undergraduate'
-    },
-    {
-      id: 'digital-marketing-specialist',
-      title: 'Digital Marketing Specialist',
-      description: 'Plan and execute digital marketing campaigns',
-      requiredSkills: ['digital-marketing', 'communication', 'creativity', 'data-analysis'],
-      salaryRange: '₹4L - ₹20L',
-      growthProspect: 'High',
-      educationLevel: 'undergraduate'
-    },
-    {
-      id: 'cybersecurity-analyst',
-      title: 'Cybersecurity Analyst',
-      description: 'Protect systems and networks from digital attacks',
-      requiredSkills: ['programming', 'critical-thinking', 'technical-troubleshooting'],
-      salaryRange: '₹7L - ₹25L',
-      growthProspect: 'Very High',
-      educationLevel: 'undergraduate'
-    },
-    {
-      id: 'product-manager',
-      title: 'Product Manager',
-      description: 'Guide the development of a product from conception to launch',
-      requiredSkills: ['leadership', 'communication', 'problem-solving', 'project-management'],
-      salaryRange: '₹10L - ₹40L',
-      growthProspect: 'High',
-      educationLevel: 'undergraduate'
-    },
-    {
-      id: 'ai-researcher',
-      title: 'AI Researcher',
-      description: 'Develop and improve artificial intelligence algorithms and systems',
-      requiredSkills: ['programming', 'math', 'research', 'critical-thinking'],
-      salaryRange: '₹10L - ₹40L',
-      growthProspect: 'Very High',
-      educationLevel: 'graduate'
-    },
-    {
-      id: 'data-visualization-specialist',
-      title: 'Data Visualization Specialist',
-      description: 'Create visual representations of data for easy understanding',
-      requiredSkills: ['data-visualization', 'design', 'data-analysis', 'communication', 'creativity'],
-      salaryRange: '₹6L - ₹25L',
-      growthProspect: 'High',
-      educationLevel: 'undergraduate'
-    },
-  ];
+  */
   
   const startAssessment = () => {
     setCurrentStep('interests');
@@ -465,14 +397,16 @@ export default function CareerAssessment({ onClose }: { onClose: () => void }) {
     }));
   };
 
-  // Check if all preference categories have a selection
+  // Check if all preference categories have a selection - Commented out as not currently used
+  /*
   const hasAllPreferences = () => {
     const { workStyle, industry, environment, salary } = assessmentData.preferences;
     return workStyle && industry && environment && salary;
   };
+  */
 
   // Sample career data for recommendations
-  const sampleCareers: CareerPath[] = [
+  const sampleCareers = useMemo(() => [
     {
       id: 'data-scientist',
       title: 'Data Scientist',
@@ -513,40 +447,17 @@ export default function CareerAssessment({ onClose }: { onClose: () => void }) {
       educationLevel: 'undergraduate',
       matchPercentage: 78,
     },
-  ];
+  ], []);
 
   // Generate career results when reaching the results step
   useEffect(() => {
     if (currentStep === 'results') {
-      setIsGeneratingResults(true);
-      // Simulate API call or processing time
-      setTimeout(() => {
-        setRecommendedCareers(sampleCareers);
-        setIsGeneratingResults(false);
-      }, 1500);
+      setRecommendedCareers(sampleCareers);
     }
-  }, [currentStep]);
+  }, [currentStep, sampleCareers]);
 
   // Results step
   const renderResults = () => {
-    if (isGeneratingResults) {
-      return (
-        <div className="bg-indigo-50 rounded-xl p-8 text-center">
-          <div className="w-20 h-20 mx-auto bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-            <motion.div 
-              className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            />
-          </div>
-          <h4 className="text-xl font-semibold text-gray-800">Analyzing your profile...</h4>
-          <p className="text-gray-600 mt-2 max-w-md mx-auto">
-            We're matching your interests, skills, values, and preferences with potential career paths.
-          </p>
-        </div>
-      );
-    }
-    
     return (
       <div className="space-y-6">
         {recommendedCareers.length > 0 ? (
@@ -777,7 +688,7 @@ export default function CareerAssessment({ onClose }: { onClose: () => void }) {
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">What skills do you excel at or enjoy using?</h3>
                 <p className="text-gray-600">
-                  Choose skills that you're either proficient in or would like to develop further in your career.
+                  Choose skills that you&apos;re either proficient in or would like to develop further in your career.
                 </p>
               </div>
               
@@ -975,7 +886,7 @@ export default function CareerAssessment({ onClose }: { onClose: () => void }) {
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-800">Your Career Recommendations</h3>
                 <p className="text-gray-600 mt-2">
-                  Based on your interests, skills, values, and preferences, we've identified these career paths for you.
+                  Based on your interests, skills, values, and preferences, we&apos;ve identified these career paths for you.
                 </p>
               </div>
               {renderResults()}

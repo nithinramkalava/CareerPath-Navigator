@@ -12,6 +12,7 @@ export default function Navigation() {
     { name: 'Home', href: '/' },
     { name: 'Careers', href: '/careers' },
     { name: 'Education', href: '/education' },
+    { name: 'Career Navigator', href: '/careers/navigator' },
     { name: 'About', href: '/about' }
   ];
 
