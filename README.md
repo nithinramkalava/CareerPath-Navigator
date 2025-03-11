@@ -23,7 +23,7 @@ CareerPath Navigator is a web application designed to help students, particularl
 1. Clone the repository:
    ```
    git clone https://github.com/nithinramkalava/CareerPath-Navigator.git
-   cd career-path-navigator
+   cd CareerPath-Navigator
    ```
 
 2. Install dependencies:
