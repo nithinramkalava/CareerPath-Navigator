@@ -1,11 +1,11 @@
 import Hero from "./components/Hero";
-import CareerCategories from "./components/CareerCategories";
+import FeaturedTools from "./components/FeaturedTools";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <CareerCategories />
+      <FeaturedTools />
     </>
   );
 }

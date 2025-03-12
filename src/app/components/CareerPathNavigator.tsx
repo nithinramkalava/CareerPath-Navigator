@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import CareerAssessment from './CareerAssessment';
 
 type Skill = {
   id: string;
@@ -439,7 +438,6 @@ export default function CareerPathNavigator() {
   const [preferHighGrowth, setPreferHighGrowth] = useState<boolean>(false);
   const [careersToCompare, setCareersToCompare] = useState<string[]>([]);
   const [showComparison, setShowComparison] = useState<boolean>(false);
-  const [showAssessment, setShowAssessment] = useState<boolean>(false);
   
   useEffect(() => {
     // Enhanced matching algorithm with weighted skills and growth prospects
@@ -598,44 +596,16 @@ export default function CareerPathNavigator() {
     setShowComparison(false);
   };
 
-  // Add a function to close the assessment
-  const closeAssessment = () => {
-    setShowAssessment(false);
-  };
-
   return (
     <section className="py-12 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
-      {showAssessment && <CareerAssessment onClose={closeAssessment} />}
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">
-            Educational Pathways Explorer
+            Skills & Career Path Explorer
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            Discover how different education choices unlock skills and career opportunities
+            Discover what skills you can develop and the career paths they unlock
           </p>
-          
-          {/* New prominent CTA for Career Assessment */}
-          <div className="mt-8 bg-gradient-to-r from-indigo-100 to-purple-100 p-6 rounded-2xl shadow-sm max-w-3xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="text-left mb-4 md:mb-0">
-                <h3 className="text-2xl font-bold text-indigo-800">Confused about your career path?</h3>
-                <p className="text-indigo-600 mt-2">Take our personalized assessment to discover careers that match your skills, interests, and values.</p>
-              </div>
-              <motion.button 
-                className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-md font-medium flex items-center"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setShowAssessment(true)}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
-                </svg>
-                Start Assessment
-              </motion.button>
-            </div>
-          </div>
         </div>
 
         {/* Education Level Selection */}
@@ -866,7 +836,7 @@ export default function CareerPathNavigator() {
               {userSkills.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center text-gray-400">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12 mb-3 opacity-50">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09Z" />
                   </svg>
                   <p className="text-lg font-medium">Select skills to see<br />matching career paths</p>
                 </div>
@@ -1129,24 +1099,6 @@ export default function CareerPathNavigator() {
             </motion.div>
           </div>
         )}
-
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500 mb-3">Want to explore more detailed pathways?</p>
-          <motion.button 
-            className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg font-medium text-lg relative overflow-hidden group"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setShowAssessment(true)}
-          >
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-            <div className="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              Start Personalized Career Assessment
-            </div>
-          </motion.button>
-        </div>
       </div>
     </section>
   );

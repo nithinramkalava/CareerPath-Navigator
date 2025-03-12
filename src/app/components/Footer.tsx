@@ -11,18 +11,23 @@ export default function Footer() {
             </Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/careers" className="text-base text-gray-500 hover:text-gray-900">
-              Careers
+            <Link href="/career-path-navigator" className="text-base text-gray-500 hover:text-gray-900">
+              Career Path Navigator
             </Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/education" className="text-base text-gray-500 hover:text-gray-900">
-              Education
+            <Link href="/educational-pathways" className="text-base text-gray-500 hover:text-gray-900">
+              Educational Pathways
             </Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/careers/navigator" className="text-base text-gray-500 hover:text-gray-900">
-              Career Navigator
+            <Link href="/career-assessment" className="text-base text-gray-500 hover:text-gray-900">
+              Career Assessment
+            </Link>
+          </div>
+          <div className="px-5 py-2">
+            <Link href="/career-categories" className="text-base text-gray-500 hover:text-gray-900">
+              Career Categories
             </Link>
           </div>
           <div className="px-5 py-2">
@@ -31,9 +36,11 @@ export default function Footer() {
             </Link>
           </div>
         </nav>
-        <p className="mt-8 text-center text-base text-gray-400">
-          CareerPath Navigator.
-        </p>
+        <div className="mt-8 text-center">
+          <p className="text-base text-gray-400">
+            &copy; {new Date().getFullYear()} CareerPath Navigator. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

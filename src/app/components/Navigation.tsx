@@ -10,19 +10,28 @@ export default function Navigation() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Education', href: '/education' },
-    { name: 'Career Navigator', href: '/careers/navigator' },
+    { name: 'Career Path Navigator', href: '/career-path-navigator' },
+    { name: 'Educational Pathways', href: '/educational-pathways' },
+    { name: 'Career Assessment', href: '/career-assessment' },
+    { name: 'Career Categories', href: '/career-categories' },
     { name: 'About', href: '/about' }
   ];
 
+  // Check if the current path starts with the given href
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === href;
+    }
+    return pathname?.startsWith(href);
+  };
+
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="font-bold text-xl text-gray-900">CareerPath Navigator</span>
+              <span className="font-bold text-xl text-indigo-600">CareerPath Navigator</span>
             </Link>
           </div>
           
@@ -33,9 +42,9 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                  pathname === link.href
+                  isActive(link.href)
                     ? 'border-indigo-500 text-gray-900'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                 }`}
               >
                 {link.name}
@@ -83,10 +92,11 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
-                pathname === link.href
+                isActive(link.href)
                   ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
                   : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
               }`}
+              onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
             </Link>
