@@ -38,10 +38,15 @@ export default function Footer() {
         </nav>
         <div className="mt-8 text-center">
           <p className="text-base text-gray-400">
-            &copy; {new Date().getFullYear()} CareerPath Navigator. All rights reserved.
+            {/* &copy; {new Date().getFullYear()} CareerPath Navigator. All rights reserved. */}
+          </p>
+          <p className="mt-2 text-sm text-gray-400">
+            A Community Service Project developed in partial fulfillment of the requirements for the 
+            Bachelor of Technology in Computer Science degree at Vasireddy Venkatadri Institute of Technology,
+            Nambur, Peda Kakani, Guntur District, Andhra Pradesh - 522508
           </p>
         </div>
       </div>
     </footer>
   );
-} 
+}
