@@ -12,17 +12,17 @@ export default function AboutPage() {
       {/* Hero Section with background pattern */}
       <div className="bg-gradient-to-b from-indigo-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="text-center">
+        <div className="text-center">
             <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl tracking-tight">
-              About CareerPath Navigator
-            </h1>
+            About CareerPath Navigator
+          </h1>
             <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-600 sm:mt-5">
-              Empowering Students through Career Exploration
-            </p>
+            Empowering Students through Career Exploration
+          </p>
           </div>
         </div>
-      </div>
-      
+        </div>
+        
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Our Mission Section - Text left, images right */}
         <div className="flex flex-col lg:flex-row items-center gap-10 mb-24">
@@ -34,12 +34,12 @@ export default function AboutPage() {
               </span>
             </h2>
             <div className="prose prose-indigo prose-lg max-w-none">
-              <p>
-                In many rural areas, students often face a significant challenge: they are unaware of the wide range of career opportunities available to them. This lack of awareness can lead to limited aspirations and missed opportunities, affecting their future potential.
-              </p>
-              <p>
-                The &quot;CareerPath Navigator&quot; project addresses this critical issue by providing a digital platform that empowers students to explore various career paths and understand the educational requirements necessary to pursue them. This project aims to offer students the tools and information needed to make informed decisions about their future.
-              </p>
+            <p>
+              In many rural areas, students often face a significant challenge: they are unaware of the wide range of career opportunities available to them. This lack of awareness can lead to limited aspirations and missed opportunities, affecting their future potential.
+            </p>
+            <p>
+              The &quot;CareerPath Navigator&quot; project addresses this critical issue by providing a digital platform that empowers students to explore various career paths and understand the educational requirements necessary to pursue them. This project aims to offer students the tools and information needed to make informed decisions about their future.
+            </p>
             </div>
           </div>
           <div className="lg:w-1/2 lg:pl-8 w-full mt-8 lg:mt-0">
@@ -106,7 +106,7 @@ export default function AboutPage() {
           <div className="p-8 md:p-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 relative">
               <span className="inline-block relative">
-                Project Timeline
+                Project Activity Log
                 <span className="absolute -bottom-2 left-0 right-0 h-1 bg-indigo-500 rounded"></span>
               </span>
             </h2>
@@ -114,42 +114,101 @@ export default function AboutPage() {
               <table className="min-w-full divide-y divide-gray-200 bg-white">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Day, Date</th>
-                    <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Brief Description</th>
+                    <th scope="col" className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Day</th>
+                    <th scope="col" className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Activity Done</th>
+                    <th scope="col" className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Learning Outcome</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Day-1, 01-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">Conducted an initial survey in the village to identify the major challenges faced by the community.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Conducted an initial survey in the village to identify the major challenges faced by the community.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Gained insights into various socioeconomic challenges affecting rural communities and developed skills in conducting community needs assessments.</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Day-2, 02-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">Observed significant sanitation issues, including improper waste disposal and lack of drainage systems.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Observed significant sanitation issues, including improper waste disposal and lack of drainage systems.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Understood how infrastructure limitations impact daily life and community development priorities.</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Day-3, 05-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">Noted the poor condition of the roads, causing difficulties for residents traveling to nearby cities.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Noted the poor condition of the roads, causing difficulties for residents traveling to nearby cities.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Recognized how transportation barriers affect access to educational and career opportunities in rural areas.</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Day-4, 06-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">Identified the lack of access to clean drinking water, leading to potential health risks.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Identified the lack of access to clean drinking water, leading to potential health risks.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Learned about the hierarchy of community needs and how basic necessities take precedence over educational concerns.</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Day-5, 08-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">Recognized the absence of nearby healthcare facilities, making it hard for residents to access medical services.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Recognized the absence of nearby healthcare facilities, making it hard for residents to access medical services.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Understood the interconnected nature of community challenges and how they collectively impact quality of life and opportunities.</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Day-6, 09-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">Discovered limited educational resources, with the local school only offering classes up to 10th grade.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">6</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Discovered limited educational resources, with the local school only offering classes up to 10th grade.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Identified key educational infrastructure gaps that limit career advancement opportunities for rural students.</td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Day-7, 11-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-gray-500">Observed a general lack of digital literacy, with most residents using smartphones primarily for entertainment.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">7</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Observed a general lack of digital literacy, with most residents using smartphones primarily for entertainment.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Recognized the opportunity to leverage existing technology for educational purposes despite limited digital literacy.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">8</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Realized that students in the village were unaware of various career opportunities and the educational paths required.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Identified the critical knowledge gap regarding career options and educational pathways as a key focus area for the project.</td>
                   </tr>
                   <tr className="bg-indigo-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-900">Day-8, 12-07-2024</td>
-                    <td className="px-6 py-4 text-sm text-indigo-700 font-medium">Realized that students in the village were unaware of various career opportunities and the educational paths required.</td>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-indigo-900">9</td>
+                    <td className="px-4 py-4 text-sm text-indigo-700">Conducted informal interviews with local high school students about their future aspirations and knowledge of career options.</td>
+                    <td className="px-4 py-4 text-sm text-indigo-700">Discovered that most students could only name 4-5 career paths, typically limited to doctor, engineer, teacher, or government job.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">10</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Met with local school teachers to understand challenges in providing career guidance to students.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Learned that teachers lacked resources and up-to-date information about modern career options to effectively guide students.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">11</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Interviewed several parents, including G. Koteshwar Rao, about their involvement in children's career planning.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Recognized parents' deep desire to support their children's futures but identified a significant knowledge gap preventing effective guidance.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">12</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Conducted a group discussion with 10th-grade students about their process for making educational choices after school.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Observed that decisions were often made based on limited information, peer pressure, or following relatives rather than aligned with personal aptitudes.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">13</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Organized a mini-workshop with students to gauge their awareness of educational requirements for different careers.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Found significant misconceptions about educational pathways and entry requirements for various professions.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">14</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Visited nearby town to assess available career counseling resources and their accessibility to village students.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Discovered that career guidance services were limited, expensive, and required physical travel, creating barriers for rural students.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">15</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Analyzed smartphone usage patterns among students through informal surveys.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Identified high smartphone penetration (78% of students) but primarily used for entertainment rather than educational purposes.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">16</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Collected feedback from students on what information would help them make better career decisions.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Compiled a list of information needs including educational pathways, skill requirements, and real-world insights about various careers.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">17</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Synthesized survey findings to identify key challenges and opportunity areas for intervention.</td>
+                    <td className="px-4 py-4 text-sm text-gray-600">Prioritized career awareness and educational guidance as the most impactful and feasible area for a technology-based solution.</td>
+                  </tr>
+                  <tr className="bg-green-50">
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-green-900">18</td>
+                    <td className="px-4 py-4 text-sm text-green-700">Formulated the initial concept for CareerPath Navigator based on community needs assessment and available technological resources.</td>
+                    <td className="px-4 py-4 text-sm text-green-700">Developed a project proposal that directly addresses the identified knowledge gap while leveraging existing technology access in the community.</td>
                   </tr>
                 </tbody>
               </table>
@@ -192,7 +251,7 @@ export default function AboutPage() {
                       <p className="font-medium text-gray-900">Limited Career Awareness</p>
                       <p className="text-gray-600">Students in rural areas often grow up in environments where only a few career options are visible, usually those related to local industries or traditional roles.</p>
                     </div>
-                  </li>
+              </li>
                   <li className="flex items-start gap-3">
                     <div className="min-w-6 mt-1">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-red-500">
@@ -203,7 +262,7 @@ export default function AboutPage() {
                       <p className="font-medium text-gray-900">Educational and Skill Barriers</p>
                       <p className="text-gray-600">Even when students aspire, they often lack clear guidance on the necessary education, skills, and training for different careers.</p>
                     </div>
-                  </li>
+              </li>
                   <li className="flex items-start gap-3">
                     <div className="min-w-6 mt-1">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-red-500">
@@ -214,8 +273,8 @@ export default function AboutPage() {
                       <p className="font-medium text-gray-900">Technology as a Double-Edged Sword</p>
                       <p className="text-gray-600">While most students now have smartphones, the use of this technology is often confined to entertainment rather than education.</p>
                     </div>
-                  </li>
-                </ul>
+              </li>
+            </ul>
               </div>
             </div>
             
@@ -234,7 +293,7 @@ export default function AboutPage() {
                       <p className="font-medium text-gray-900">Comprehensive Career Exploration</p>
                       <p className="text-gray-600">We categorize careers into fields such as Technology, Arts, Law, Banking & Finance, Medicine, Political Sciences, Civil Services, and Transportation.</p>
                     </div>
-                  </li>
+              </li>
                   <li className="flex items-start gap-3">
                     <div className="min-w-6 mt-1">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-green-500">
@@ -245,7 +304,7 @@ export default function AboutPage() {
                       <p className="font-medium text-gray-900">Educational Pathway Visualization</p>
                       <p className="text-gray-600">Our platform includes visual tools that map out the educational journey required for each career, from high school to professional roles.</p>
                     </div>
-                  </li>
+              </li>
                   <li className="flex items-start gap-3">
                     <div className="min-w-6 mt-1">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-green-500">
@@ -256,8 +315,8 @@ export default function AboutPage() {
                       <p className="font-medium text-gray-900">Inspiration Through Expert Insights</p>
                       <p className="text-gray-600">To motivate students, we feature testimonials and interviews with professionals across various fields, showing what is possible.</p>
                     </div>
-                  </li>
-                </ul>
+              </li>
+            </ul>
               </div>
               
               <div className="rounded-xl overflow-hidden shadow-lg max-w-md mx-auto">
