@@ -43,15 +43,18 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="lg:w-1/2 lg:pl-8 w-full mt-8 lg:mt-0">
-            <div className="rounded-xl overflow-hidden shadow-lg max-w-md mx-auto">
+            <div className="rounded-xl overflow-hidden shadow-lg max-w-md mx-auto relative group">
               <Image
                 src="/images/1.jpg"
-                alt="Students exploring career options"
+                alt="Students exploring career options - Nithin Ram"
                 width={800}
                 height={500}
                 className="w-full h-auto object-cover" 
                 priority
               />
+              <div className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm text-indigo-700 px-3 py-1 text-xs font-medium rounded-full shadow-sm border border-indigo-100 transition-all duration-300 hover:bg-indigo-50 hover:scale-110 hover:shadow-md group-hover:bg-white/90 group-hover:border-indigo-200">
+                Nithin Ram
+              </div>
             </div>
           </div>
         </div>
@@ -88,7 +91,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="lg:w-1/2 lg:pr-8 w-full mt-8 lg:mt-0">
-            <div className="rounded-xl overflow-hidden shadow-lg">
+            <div className="rounded-xl overflow-hidden shadow-lg relative group">
               <Image
                 src="/images/2.jpg"
                 alt="Rural school classroom"
@@ -96,6 +99,9 @@ export default function AboutPage() {
                 height={600}
                 className="w-full h-auto object-cover"
               />
+              <div className="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm text-indigo-700 px-3 py-1 text-xs font-medium rounded-full shadow-sm border border-indigo-100 transition-all duration-300 hover:bg-indigo-50 hover:scale-110 hover:shadow-md group-hover:bg-white/90 group-hover:border-indigo-200">
+                Teena Vyshnavi
+              </div>
             </div>
           </div>
         </div>
@@ -228,7 +234,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Left Side - Image and Challenges */}
             <div className="space-y-8">
-              <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="rounded-xl overflow-hidden shadow-lg relative group">
                 <Image
                   src="/images/3.jpg"
                   alt="Student using technology for education"
@@ -236,6 +242,9 @@ export default function AboutPage() {
                   height={600}
                   className="w-full h-auto object-cover"
                 />
+                <div className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm text-indigo-700 px-3 py-1 text-xs font-medium rounded-full shadow-sm border border-indigo-100 transition-all duration-300 hover:bg-indigo-50 hover:scale-110 hover:shadow-md group-hover:bg-white/90 group-hover:border-indigo-200">
+                  Swarna Sree
+                </div>
               </div>
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
@@ -319,7 +328,7 @@ export default function AboutPage() {
             </ul>
               </div>
               
-              <div className="rounded-xl overflow-hidden shadow-lg max-w-md mx-auto">
+              <div className="rounded-xl overflow-hidden shadow-lg max-w-md mx-auto relative group">
                 <Image
                   src="/images/4.jpg"
                   alt="Career mentorship session"
@@ -327,6 +336,9 @@ export default function AboutPage() {
                   height={500}
                   className="w-full h-auto object-cover"
                 />
+                <div className="absolute top-3 right-3 bg-white/80 backdrop-blur-sm text-indigo-700 px-3 py-1 text-xs font-medium rounded-full shadow-sm border border-indigo-100 transition-all duration-300 hover:bg-indigo-50 hover:scale-110 hover:shadow-md group-hover:bg-white/90 group-hover:border-indigo-200">
+                  Venky
+                </div>
               </div>
             </div>
           </div>
@@ -343,6 +355,31 @@ export default function AboutPage() {
           <p className="text-lg text-gray-700 mb-8">
             By providing a user-friendly, accessible platform, CareerPath Navigator seeks to empower students to make informed decisions about their future, ultimately supporting their professional development and success. We believe that with the right information and guidance, every student can achieve their full potential.
           </p>
+        </div>
+
+        {/* After the Impact section */}
+        <div className="max-w-4xl mx-auto border-t border-gray-100 pt-10 mb-12">
+          <p className="text-sm text-gray-500 text-center mb-6">Developed by:</p>
+          <div className="flex flex-wrap justify-center gap-8">
+            {[
+              { name: "Nithin Ram", image: 1 },
+              { name: "Teena Vyshnavi", image: 2 },
+              { name: "Swarna Sree", image: 3 },
+              { name: "Venky", image: 4 }
+            ].map((member, index) => (
+              <div key={index} className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full overflow-hidden relative flex-shrink-0">
+                  <Image
+                    src={`/images/${member.image}.jpg`}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-700">{member.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
