@@ -166,56 +166,6 @@ export default function AboutPage() {
                     <td className="px-4 py-4 text-sm text-gray-600">Realized that students in the village were unaware of various career opportunities and the educational paths required.</td>
                     <td className="px-4 py-4 text-sm text-gray-600">Identified the critical knowledge gap regarding career options and educational pathways as a key focus area for the project.</td>
                   </tr>
-                  <tr className="bg-indigo-50">
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-indigo-900">9</td>
-                    <td className="px-4 py-4 text-sm text-indigo-700">Conducted informal interviews with local high school students about their future aspirations and knowledge of career options.</td>
-                    <td className="px-4 py-4 text-sm text-indigo-700">Discovered that most students could only name 4-5 career paths, typically limited to doctor, engineer, teacher, or government job.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">10</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Met with local school teachers to understand challenges in providing career guidance to students.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Learned that teachers lacked resources and up-to-date information about modern career options to effectively guide students.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">11</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Interviewed several parents, including G. Koteshwar Rao, about their involvement in children's career planning.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Recognized parents' deep desire to support their children's futures but identified a significant knowledge gap preventing effective guidance.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">12</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Conducted a group discussion with 10th-grade students about their process for making educational choices after school.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Observed that decisions were often made based on limited information, peer pressure, or following relatives rather than aligned with personal aptitudes.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">13</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Organized a mini-workshop with students to gauge their awareness of educational requirements for different careers.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Found significant misconceptions about educational pathways and entry requirements for various professions.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">14</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Visited nearby town to assess available career counseling resources and their accessibility to village students.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Discovered that career guidance services were limited, expensive, and required physical travel, creating barriers for rural students.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">15</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Analyzed smartphone usage patterns among students through informal surveys.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Identified high smartphone penetration (78% of students) but primarily used for entertainment rather than educational purposes.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">16</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Collected feedback from students on what information would help them make better career decisions.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Compiled a list of information needs including educational pathways, skill requirements, and real-world insights about various careers.</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">17</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Synthesized survey findings to identify key challenges and opportunity areas for intervention.</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">Prioritized career awareness and educational guidance as the most impactful and feasible area for a technology-based solution.</td>
-                  </tr>
-                  <tr className="bg-green-50">
-                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-green-900">18</td>
-                    <td className="px-4 py-4 text-sm text-green-700">Formulated the initial concept for CareerPath Navigator based on community needs assessment and available technological resources.</td>
-                    <td className="px-4 py-4 text-sm text-green-700">Developed a project proposal that directly addresses the identified knowledge gap while leveraging existing technology access in the community.</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
