@@ -54,7 +54,7 @@ export default function AboutPage() {
                 priority
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                <div className="text-white text-sm font-medium">Photo by Nithin Ram</div>
+                <div className="text-white text-sm font-medium">Nithin Ram</div>
               </div>
             </div>
           </div>
