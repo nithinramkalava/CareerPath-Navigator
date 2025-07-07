@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { useState } from 'react';
 
 const features = [
@@ -75,7 +75,7 @@ export default function FeaturedTools() {
   const [activeFeature, setActiveFeature] = useState<string | null>(null);
   
   // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -86,7 +86,7 @@ export default function FeaturedTools() {
     }
   };
   
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1,
@@ -104,7 +104,7 @@ export default function FeaturedTools() {
     transition: {
       duration: 4,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   };
   
@@ -113,7 +113,7 @@ export default function FeaturedTools() {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   };
   
